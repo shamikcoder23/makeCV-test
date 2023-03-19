@@ -19,11 +19,11 @@
     <section id="title">
       <div class="container-fluid">
         <!-- Nav Bar -->
-        <nav class="navbar navbar-expand-lg navbar-light">
+        <nav class="navbar fixed-top navbar-expand-lg navbar-light">
           <a class="navbar-brand" href="">Rendering Crew</a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
-        </button>
+          </button>
           <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
               <ul class="navbar-nav ms-auto">
                 <li class="nav-item">
@@ -46,16 +46,16 @@
       </div>
     </section>
     <section id="examples">
-      <div id="carouselExampleControls" class="carousel slide" data-bs-ride="true" data-interval="1000" data-pause="hover" data-keyboard="True" data-touch="True">
+      <div id="carouselExampleControls" class="carousel slide" data-bs-ride="true" data-interval="500" data-pause="hover" data-keyboard="True" data-touch="True">
         <div class="carousel-inner">
-          <div class="carousel-item active car-img">
-            <img class="d-block w-100" src="images/11.png" alt="First slide">
+          <div class="carousel-item active car-text">
+            <h1>Quick</h1>
           </div>
-          <div class="carousel-item car-img">
-            <img class="d-block w-100" src="images/21.png" alt="Second slide">
+          <div class="carousel-item car-text">
+            <h1>Easy</h1>
           </div>
-          <div class="carousel-item car-img">
-            <img class="d-block w-100" src="images/31.png" alt="Third slide">
+          <div class="carousel-item car-text">
+            <h1>Affordable</h1>
           </div>
         </div>
         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
@@ -69,6 +69,44 @@
       </div>
     </section>
         
+    <!--<div class="card mx-auto mt-3" id="sign-up">
+      <form class="form-signin signin" id="SignIn">
+        <h1 class="h3 mb-3 font-weight-normal">Sign In</h1>
+        <label for="inputEmail" class="sr-only">Email address</label>
+        <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
+        <label for="inputPassword" class="sr-only">Password</label>
+        <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
+        <div class="checkbox mb-3">
+            <label>
+                <input type="checkbox" value="remember-me" required> Remember me
+            </label>
+        </div>
+        <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+        <p>Don't have an account? <a href="#SignUp" id="in">Sign Up</a></p>
+        <p class="mt-5 mb-3 text-muted">&copy; 2023</p>
+      </form>
+    </div>
+    <div class="card mx-auto mt-3" id="sign-up">
+      <form action="/" class="form-signin signup" id="SignUp" method="post">
+        <h1 class="h3 mb-3 font-weight-normal">Sign Up</h1>
+        <label for="FirstName" class="sr-only">First Name</label>
+        <input type="text" name="n1" class="form-control top" placeholder="First Name" required autofocus>
+        <label for="SecondName" class="sr-only">Second Name</label>
+        <input type="text" name="n2" class="form-control mid" placeholder="Second Name" required>
+        <label for="inputEmail" class="sr-only">Email address</label>
+        <input type="email" name="e" class="form-control bottom" placeholder="Email" required>
+        <label for="inputPassword" class="sr-only">Password</label>
+        <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
+        <div class="checkbox mb-3">
+            <label>
+                <input type="checkbox" value="agree" required> I agree to the terms
+            </label>
+        </div>
+        <button class="btn btn-lg btn-primary btn-block" type="submit">Sign Up</button>
+        <p><a href="#SignIn" id="up">Sign In</a> instead?</p>
+        <p class="mt-5 mb-3 text-muted">&copy; 2023</p>
+      </form>    
+    </div>-->
     <div class="card mx-5 mt-3" id="cv-form">
       <div class="card-body">
         <div class="container" >   
@@ -127,10 +165,8 @@
                   </button>
                 </div>
               </div>
-            </form>        
-          <div>
-            <p class="uem">Made with ❤️ at UEM</p>
-          </div>
+            </form>      
+          
 
           <div class="container text-center mt-3">
             <button onclick="generateCV()" class="btn btn-dark btn-lg gbttn" type="submit">
@@ -140,6 +176,15 @@
         </div>
       </div>
     </div>
+    <section id="footer">
+      <div>
+        <p class="uem">Made with ❤️ at UEM</p>
+      
+        <a href="https://uem.edu.in/">University of Engineering & Management</a>
+        <p>New Town, University Area, Plot No. III</p>
+        <p>B/5, New Town Rd, Action Area III, Kolkata 700160.</p>
+      </div>
+    </section>
     <!-- cv template -->
 
     <div class="container " id="cv-template">

@@ -1,6 +1,7 @@
 body{
   color:#22031f;
   background-color: #e0d3de;
+  margin-top: 10rem;
 }
 
 #title {
@@ -8,20 +9,26 @@ body{
 }
 
 .navbar{
-  padding-bottom: 5rem;
-  background-color: #e0d3de;
+  z-index: 1;
+  padding-bottom: 3rem;
+  backdrop-filter: blur(16px) saturate(180%);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
+  background-color: rgba(228, 221, 230, 0.75);
+  border-radius: 12px;
+  border: 1px solid rgba(209, 213, 219, 0.3);
 }
 .navbar-item{
-  padding: 0 50%;
+  padding: 0 0;
 }
 .navbar-brand{
   font-size: 2rem;
   color: #22031f;
   padding: 2rem 2rem 0;
-  font-family: 'Berkshire Swash', cursive;;
+  font-family: 'Berkshire Swash', cursive;
 }
+
 h1{
-  font-family: 'Pacifico', cursive,'Montserrat-Black',sans-serif;
+  font-family: 'Pacifico', cursive/*,'Montserrat-Black',sans-serif*/;
   font-size: 3.5rem;
   line-height: 1.5;
   font-weight: bolder;
@@ -62,11 +69,14 @@ h2{
   position: relative;
   margin: 0 5%;
 }
-.car-img{
-  padding: 10%;
-  width: 60%;
-  height: 60%;
-  margin: auto;
+.car-text{
+  padding: 5%;
+  font-size: 4.5rem;
+  color: #e0d3de;
+}
+.car-text:hover{
+  color: #22031f;
+  text-shadow: 0 0 5px #fff, 0 0 10px #faecf8, 0 0 15px #faecf8, 0 0 20px #e0d3de, 0 0 25px #22031f, 0 0 30px #22031f;
 }
 
 .btn {
@@ -150,4 +160,19 @@ h2{
   text-align: center;
   padding-bottom: 0;
   padding-top: 40px;
+}
+
+#footer{
+  text-align: center;
+  background-color: #22031f;
+  color: #e0d3de;
+}
+
+a{
+  color: #e0d3de;
+  text-decoration: none;
+}
+a:hover{
+  color: rgb(176, 203, 226);
+  text-decoration: none;
 }
