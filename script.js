@@ -128,10 +128,15 @@ function generateCV() {
   };
 
   document.getElementById("cv-form").style.display = "none";
+  document.getElementById("tagline").style.display = "none";
+  document.getElementById("footer").style.display = "none";
+  document.getElementById("examples").style.display = "none";
   document.getElementById("cv-template").style.display = "block";
 }
 
 //print cv
 function printCV() {
+  document.getElementById("title").style.display = "none";
+  document.getElementById("print").style.display = "none";
   window.print();
 }
