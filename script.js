@@ -1,4 +1,19 @@
 // alert("loading");
+/*(function () {
+  'use strict'
+  var forms = document.querySelectorAll('.needs-validation')
+  Array.prototype.slice.call(forms).forEach(function(form) {
+    form.addEventListener('submit',function (event) {
+      if(!form.checkValidity()){
+        event.preventDefault()
+        event.stopPropagation()
+      }
+      form.classList.add('was-validated')
+    }, false)
+  });
+})*/
+
+document.getElementById("templates").style.display = "none";
 function addNewWEField() {
   //   console.log("Adding new field");
 
@@ -41,9 +56,33 @@ function addNewskillField() {
 
   skillOb.insertBefore(newNode, skillAddButtonOb);
 }
+function formValid() {
+  'use strict'
+  const forms = document.querySelectorAll('.needs-validation');
+  Array.from(forms).forEach(form => {
+    form.addEventListener('submit', event => {
+      if(!form.checkValidity()){
+        event.preventDefault();
+        event.stopPropagation();
+      }
+      form.classList.add('was-validated')
+    },false);
+  });  
+}
+//template choice
+function chooseCV() {  
+  document.getElementById("cv-form").style.display = "none";
+  document.getElementById("examples").style.display = "none";
+  document.getElementById("tagline").style.display = "none";
+  document.getElementById("templates").style.display = "block";
+}
 
 //generating cv
 function generateCV() {
+  document.getElementById("title").style.display = "none";
+  document.getElementById("templates").style.display = "none";
+  document.getElementById("footer").style.display = "none";
+  document.getElementById("cv-template").style.display = "block";
   // console.log("generating CV");
 
   let nameField = document.getElementById("nameField").value;
@@ -77,37 +116,57 @@ function generateCV() {
   //we
 
   let wes = document.getElementsByClassName("weField");
-
-  let str = "";
-
-  for (let e of wes) {
-    str = str + `<li> ${e.value} </li>`;
+  let weVal = document.getElementById("WorkExp").value;
+  console.log(weVal)
+  if (weVal === "") {
+    document.getElementById("weHead").style.display = "none";
   }
+  else{
+    let str = "";
 
-  document.getElementById("weT").innerHTML = str;
+    for (let e of wes) {
+      str = str + `<li> ${e.value} </li>`;
+    }
+
+    document.getElementById("weT").innerHTML = str;
+  }
 
   //skill
   let skils = document.getElementsByClassName("skillField");
+  let skillVal = document.getElementById("skl").value;
+  console.log(skillVal)
+  if (skillVal === "") {
+    document.getElementById("skillHead").style.display = "none";
+  }
+  else{
+    let str2 = "";
 
-  let str2 = "";
+    for (let e of skils) {
+      str2 += `<li> ${e.value} </li>`;
+    }
 
-  for (let e of skils) {
-    str2 += `<li> ${e.value} </li>`;
+    document.getElementById("skillT").innerHTML = str2;
   }
 
-  document.getElementById("skillT").innerHTML = str2;
+  
 
   //aq
 
   let aqs = document.getElementsByClassName("eqField");
-
-  let str1 = "";
-
-  for (let e of aqs) {
-    str1 += `<li> ${e.value} </li>`;
+  let aqVal = document.getElementById("aqua").value;
+  console.log(aqVal)
+  if (aqVal === "") {
+    document.getElementById("aqHead").style.display = "none";
   }
+  else{
+    let str2 = "";
 
-  document.getElementById("aqT").innerHTML = str1;
+    for (let e of aqs) {
+      str2 += `<li> ${e.value} </li>`;
+    }
+
+    document.getElementById("aqT").innerHTML = str2;
+  }
 
   //code for setting image
 
@@ -127,16 +186,10 @@ function generateCV() {
     document.getElementById("imgTemplate").src = reader.result;
   };
 
-  document.getElementById("cv-form").style.display = "none";
-  document.getElementById("tagline").style.display = "none";
-  document.getElementById("footer").style.display = "none";
-  document.getElementById("examples").style.display = "none";
-  document.getElementById("cv-template").style.display = "block";
 }
 
 //print cv
 function printCV() {
-  document.getElementById("title").style.display = "none";
   document.getElementById("print").style.display = "none";
   window.print();
 }

@@ -7,7 +7,6 @@ body{
 #title {
   background-color: #e0d3de;
 }
-
 .navbar{
   z-index: 1;
   padding-bottom: 3rem;
@@ -124,6 +123,7 @@ h2{
   font-family: Arial;
   color: #000000;
   font-size: 26px;
+  margin-top: 20px;
   padding: 17px 24px 16px 24px;
   text-decoration: none;
 }
@@ -137,6 +137,7 @@ h2{
   background-image: linear-gradient(to bottom, #3cfcfc, #343cd9);
   text-decoration: none;
 }
+
 .header1{
   display: inline-block;
   
@@ -168,13 +169,29 @@ h2{
   color: #e0d3de;
 }
 
-a{
+
+.univ{
   color: #e0d3de;
   text-decoration: none;
 }
-a:hover{
-  color: rgb(176, 203, 226);
+.univ:hover{
+  color: #e0d3de;
+  text-transform:uppercase;
   text-decoration: none;
+}
+#submitBtn a{  
+  color: #000000;
+  text-decoration: none;
+}
+#submitBtn a:hover{
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.nav-link:hover{
+  text-transform:uppercase;
+  text-shadow: #000000;
+  text-underline-position:above;
 }
 
 @keyframes shake {
@@ -191,15 +208,22 @@ a:hover{
     margin-left: 0rem;
   }
 }
-#nameField:invalid {
+#nameField:invalid, #contactField:invalid, #emailfield:invalid, #addressField:invalid{
   animation: shake 0.2s ease-in-out 0s 2;
   box-shadow: 0 0 0.6rem #ff0000;
 }
-#contactField:invalid {
-  animation: shake 0.2s ease-in-out 0s 2;
-  box-shadow: 0 0 0.6rem #ff0000;
+
+#tem{  
+  border-radius: 20%;
+  width: 200px;
+  height: 200px;
+  display: inline-block;
+  margin: 10px 10px;
+  object-fit: cover;
+  border: 2px solid black;
 }
-#emailField:invalid {
-  animation: shake 0.2s ease-in-out 0s 2;
-  box-shadow: 0 0 0.6rem #ff0000;
+#templates .card{
+  margin: 10px;
+  box-shadow: 0 0 0.6rem #a796f0;
+  text-align: center;
 }
