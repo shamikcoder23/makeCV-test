@@ -8,10 +8,10 @@
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC&family=Berkshire+Swash&family=Pacifico&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC&family=Berkshire+Swash&family=Pacifico&family=Poppins&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="style.css">
   </head>
@@ -31,7 +31,7 @@
                   <a class="nav-link" aria-current="page" href="#footer">Contacts</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#login">Login</a>
+                  <a onclick="chooseCV()" class="nav-link" href="#templates">Templates</a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" href="#blog">Blog</a>
@@ -176,8 +176,8 @@
           <div class="card">
             <div class="card-body">
               <h2 class="card-title">Template 2</h2>
-              <img id="tem" src="images/21.png" alt="template2">
-              <button onclick="generateCV()" id="submitBtn" class="btn btn-dark btn-lg gbttn " type="submit">
+              <img id="tem" src="images/2023-05-01.png" alt="template2">
+              <button onclick="createtwoCV()" id="submitBtn" class="btn btn-dark btn-lg gbttn " type="submit">
                 Create CV
               </button>
             </div>
@@ -329,12 +329,130 @@
           </div>
 
           <div class="container mt-3 text-center">
-            <button onclick="printCV()" class="btn btn-dark btn-lg backgroundt" id="print">Print CV</button>
+            <button onclick="printCV()" class="btn btn-dark btn-lg gbttn" id="print">Print CV</button>
           </div>
         
       </div>
     </div>
+ 
+    <!-- CV TEMPLATE 2 -->
+        <!-- cv template -->
 
+        <div class="container " id="cv-template2">
+          <div >
+            <div class="  py-2 ">
+              <!-- first col  -->
+              <div class="row rowbg2">               
+                <div class="col-sm-3">
+                  <img
+                   src="images/image.jpg"
+                   alt=""
+                   class="img-fluid myimg"
+                   id="imgTemplate2"
+                  />
+                </div>
+                <div class="col-sm-9 details">
+                  <p class="header1" id="nameT2">Your Name</p>
+                  <p class="header2" id="contactT2">Web Developer</p>
+                  <p class="header4" id="emailT2">koushikd2004@gmail.com</p>
+                  <p class="header3" id="addressT2">Newtwon Kolkata, India</p>
+    
+                </div>
+                <hr>
+              </div>       
+            </div>
+            
+            <!-- skills -->
+            <div class="row">
+              <div class="col-md-3">
+                <div class="mt-4" id="skillHead2">
+                  <div class="card-header background2">
+                    <h3>Skill Sets</h3>
+                  </div>
+                  <div class="card-body">
+                    <ul id="skillT2">
+                      <li>
+                        Web Designing
+                      </li>
+                      <li>
+                        Backend Development
+                      </li>
+                      <li>
+                        JavaScript
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-9">
+                <div >
+                  <div class="card-header background2 ">
+                    <h3>About me</h3>
+                  </div>
+                  <div class="card-body">
+                    <p id="objectiveT2">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod
+                      quam quos totam dolorem commodi earum, labore consectetur
+                      excepturi reiciendis, a fugiat porro rem mollitia inventore
+                      eligendi, saepe libero hic aliquam? Iure molestias natus dolore
+                      animi, possimus eius! Atque nesciunt eveniet exercitationem enim
+                      nisi quis. Consequatur aliquam reiciendis officiis laboriosam
+                      numquam?
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+    
+            <!-- work Experience -->
+            <div class="mt-4" id="weHead2">
+              <div class="card-header background2">
+                <h3>Work Experience</h3>
+              </div>
+              <div class="card-body">
+                <ul id="weT2">
+                  <li>
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                    Odit, ad.
+                  </li>
+                  <hr class="linebreak">
+                  <li>
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                    Odit, ad.
+                  </li>
+                  <hr class="linebreak">
+                  <li>
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                    Odit, ad.
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <!-- academic Qualification  -->
+            <div class="mt-4" id="aqHead2">
+              <div class="card-header background2">
+                <h3>Academic Qualification</h3>
+              </div>
+              <div class="card-body">
+                <ul id="aqT2">
+                  <li>
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                    Odit, ad.
+                  </li>
+                  <hr class="linebreak">
+                  <li>
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                    Odit, ad.
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="container mt-3 text-center">
+              <button onclick="printCV()" class="btn btn-dark btn-lg gbttn" id="print">Print CV</button>
+            </div>
+          </div>
+        </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
     <script src="script.js"></script>
   </body>

@@ -188,6 +188,118 @@ function generateCV() {
 
 }
 
+//template 2
+
+function createtwoCV() {
+  document.getElementById("title").style.display = "none";
+  document.getElementById("templates").style.display = "none";
+  document.getElementById("footer").style.display = "none";
+  document.getElementById("cv-template2").style.display = "block";
+  // console.log("generating CV");
+
+  let nameField = document.getElementById("nameField").value;
+
+  let nameT1 = document.getElementById("nameT2");
+
+  nameT1.innerHTML = nameField;
+
+  //direct
+
+  document.getElementById("nameT2").innerHTML = nameField;
+
+  //contact
+  console.log(document.getElementById("contactField").value)
+  document.getElementById("contactT2").innerHTML =
+    document.getElementById("contactField").value;
+
+  //email
+  document.getElementById("emailT2").innerHTML =
+    document.getElementById("emailfield").value;
+
+  //address
+  document.getElementById("addressT2").innerHTML =
+    document.getElementById("addressField").value;
+
+  //objective
+
+  document.getElementById("objectiveT2").innerHTML =
+    document.getElementById("objectiveField").value;
+
+  //we
+
+  let wes = document.getElementsByClassName("weField");
+  let weVal = document.getElementById("WorkExp").value;
+  console.log(weVal)
+  if (weVal === "") {
+    document.getElementById("weHead2").style.display = "none";
+  }
+  else{
+    let str = "";
+
+    for (let e of wes) {
+      str = str + `<li> ${e.value} </li>`;
+    }
+
+    document.getElementById("weT2").innerHTML = str;
+  }
+
+  //skill
+  let skils = document.getElementsByClassName("skillField");
+  let skillVal = document.getElementById("skl").value;
+  console.log(skillVal)
+  if (skillVal === "") {
+    document.getElementById("skillHead2").style.display = "none";
+  }
+  else{
+    let str2 = "";
+
+    for (let e of skils) {
+      str2 += `<li> ${e.value} </li>`;
+    }
+
+    document.getElementById("skillT2").innerHTML = str2;
+  }
+
+  
+
+  //aq
+
+  let aqs = document.getElementsByClassName("eqField");
+  let aqVal = document.getElementById("aqua").value;
+  console.log(aqVal)
+  if (aqVal === "") {
+    document.getElementById("aqHead2").style.display = "none";
+  }
+  else{
+    let str2 = "";
+
+    for (let e of aqs) {
+      str2 += `<li> ${e.value} </li>`;
+    }
+
+    document.getElementById("aqT2").innerHTML = str2;
+  }
+
+  //code for setting image
+
+  let file = document.getElementById("imgField").files[0];
+
+  console.log(file);
+
+  let reader = new FileReader();
+
+  reader.readAsDataURL(file);
+
+  console.log(reader.result);
+
+  //set the image to template
+
+  reader.onloadend = function () {
+    document.getElementById("imgTemplate2").src = reader.result;
+  };
+
+}
+
 //print cv
 function printCV() {
   document.getElementById("print").style.display = "none";
